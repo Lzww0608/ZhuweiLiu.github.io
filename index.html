@@ -162,6 +162,67 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/07/21/%E5%9B%BE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="枫叶">
+      <meta itemprop="description" content="The most painful things I have ever encountered are regret and betrayal.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="枫叶苑">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/07/21/%E5%9B%BE/" class="post-title-link" itemprop="url">test</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-07-21 10:44:24 / 修改时间：10:44:40" itemprop="dateCreated datePublished" datetime="2023-07-21T10:44:24+08:00">2023-07-21</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>BFS求单源最短路径：<br>void BFS_MIN_Distance(Graph G,int u){<br>    for(i&#x3D;0;i&lt;G.vexnum;++i)<br>        d[i]&#x3D;00;<br>    visited[u]&#x3D;TRUE;d[u]&#x3D;0<br>    EnQueue(Q,u);<br>    while(!isEmpty(Q)){<br>        DeQueue(Q,u);<br>        for(w&#x3D;FirstNeighbor(G,u);w&gt;&#x3D;0;w&#x3D;NextNeighbor(G,u,w))<br>            if(!visited[w]){<br>                visited[w]&#x3D;TRUE;<br>                d[w]&#x3D;d[u]+1;<br>                EnQueue(Q,w);<br>            }<br>    }<br>}</p>
+<p>DFS:<br>bool visited[MAX_VERTEX_NUM]<br>void DFSTraverse(Graph G){<br>    for(v&#x3D;0;v&lt;G.vexnum;v++)<br>        visited[v]&#x3D;FALSE;<br>    for(v&#x3D;0;v&lt;G.vexnum;v++)<br>        if(!visited[v])<br>            DFS(G,v);<br>}<br>void DFS(Graph G,int v){<br>    visit(v);<br>    visited[v]&#x3D;TRUE;<br>    for(w&#x3D;FirstNeighbor(G,v);w&gt;&#x3D;0;w&#x3D;NextNeighbor(G,v,w))<br>        if(!visited(w))<br>            DFS(G,w);<br>}</p>
+<p>拓扑排序算法：<br>bool TopologicalSort(Graph G){<br>    InitStack(S);<br>    for(int i&#x3D;0;i&lt;G.venum;i++)<br>        if(indegree[i]&#x3D;&#x3D;0)<br>            Push(S,i);<br>    int ocunt&#x3D;0;<br>    while(!IsEmpty(S)){<br>        Pop(S,i);<br>        print[count++]&#x3D;i;<br>        for(p&#x3D;G.vertices[i].firstarc;p;p&#x3D;p-&gt;nextarc){<br>            v&#x3D;p-&gt;adjvex;<br>            if(!(–indegree[v]))<br>                Push(S,v)<br>        }<br>    }<br>    if(count&lt;G.vexnum)<br>        return false;<br>    else<br>        return true;<br>}</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/21/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -294,7 +355,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -321,8 +382,8 @@
 
 <div class="copyright">
   
-  &copy; 
-  <span itemprop="copyrightYear">2022</span>
+  &copy; Fri Oct 21 2022 08:00:00 GMT+0800 (GMT+08:00) – 
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -331,7 +392,56 @@
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
 
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客数<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+$(document).ready(function() {
+
+    var int = setInterval(fixCount, 50);  // 50ms周期检测函数
+    var countOffset = 20000;  // 初始化首次数据
+
+    function fixCount() {            
+       if (document.getElementById("busuanzi_container_site_pv").style.display != "none")
+        {
+            $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + countOffset); 
+            clearInterval(int);
+        }                  
+        if ($("#busuanzi_container_site_pv").css("display") != "none")
+        {
+            $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + countOffset); // 加上初始数据 
+            clearInterval(int); // 停止检测
+        }  
+    }
+       	
+});
+</script> 
+
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 
